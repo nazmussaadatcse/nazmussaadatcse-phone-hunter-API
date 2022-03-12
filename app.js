@@ -76,23 +76,23 @@ const displayMobileDetail = mobile => {
   div.classList.add('card');
 
       div.innerHTML = `
-      <img src="${mobile.image}" class="card-img-top w-50" alt="...">
+      <img src="${mobile?.image}" class="card-img-top w-50" alt="...">
       <div class="card-body">
-          <h5 class="card-title">${mobile.name}</h5>
-          <p class="card-text">Brand: ${mobile.brand}</p>
+          <h5 class="card-title">${mobile?.name}</h5>
+          <p class="card-text">Brand: ${mobile?.brand}</p>
           <h3 class="text-center">Main Features</h3>
-          <p class="card-text">ChipSet: ${mobile.mainFeatures.chipSet}</p>
-          <p class="card-text">Memory: ${mobile.mainFeatures.memory}</p>
-          <p class="card-text">Sensors: ${mobile.mainFeatures.sensors.join(", ")}</p>
-          <p class="card-text">Storage: ${mobile.mainFeatures.storage}</p>
+          <p class="card-text">ChipSet: ${mobile?.mainFeatures.chipSet}</p>
+          <p class="card-text">Memory: ${mobile?.mainFeatures.memory}</p>
+          <p class="card-text">Sensors: ${mobile?.mainFeatures.sensors.join(", ")}</p>
+          <p class="card-text">Storage: ${mobile?.mainFeatures.storage}</p>
           <h3 class="text-center">Other Features</h3>
-          <p class="card-text">Bluetooth: ${mobile.others?.Bluetooth}</p>
-          <p class="card-text">GPS: ${mobile.others?.GPS}</p>
-          <p class="card-text">NFC: ${mobile.others?.NFC}</p>
-          <p class="card-text">Radio: ${mobile.others?.Radio}</p>
-          <p class="card-text">USB: ${mobile.others?.USB}</p>
-          <p class="card-text">WLAN: ${mobile.others?.WLAN}</p>
-          <p class="card-text">GPS: ${mobile.others?.GPS}</p>
+          <p class="card-text">Bluetooth: ${mobile?.others?.Bluetooth ? mobile?.others?.Bluetooth : 'Not Found'}</p>
+          <p class="card-text">GPS: ${mobile?.others?.GPS ? mobile?.others?.GPS : 'Not Found' }</p>
+          <p class="card-text">NFC: ${mobile?.others?.NFC ? mobile?.others?.NFC : 'Not Found'}</p>
+          <p class="card-text">Radio: ${mobile?.others?.Radio ? mobile?.others?.Radio : 'Not Found'}</p>
+          <p class="card-text">USB: ${mobile?.others?.USB ? mobile?.others?.USB : 'Not Found'}</p>
+          <p class="card-text">WLAN: ${mobile?.others?.WLAN ? mobile?.others?.WLAN : 'Not Found'}</p>
+
           <p class="card-text">Release date: ${mobile?.releaseDate ? mobile?.releaseDate : 'Not Found'}</p>
       </div>
       `;
