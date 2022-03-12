@@ -74,6 +74,18 @@ const displayMobileDetail = mobile => {
   const div = document.createElement('div');
   div.classList.add('card');
 
-
-}
+      div.innerHTML = `
+      <img src="${mobile.image}" class="card-img-top w-50" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">${mobile.name}</h5>
+          <p class="card-text">Brand: ${mobile.brand}</p>
+          <p class="card-text">ChipSet: ${mobile.mainFeatures.chipSet}</p>
+          <p class="card-text">Memory: ${mobile.mainFeatures.memory}</p>
+          <p class="card-text">Sensors: ${mobile.mainFeatures.sensors}</p>
+          <p class="card-text">Storage: ${mobile.mainFeatures.storage}</p>
+          <p class="card-text">others: ${mobile.others.GPS}</p>
+          <p class="card-text">Release date: ${mobile?.releaseDate || 'Not Found'}</p>
+      </div>
+      `;
+      mobileDetails.appendChild(div);
 }
