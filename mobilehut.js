@@ -18,6 +18,7 @@ const searchMobile = async () =>{
 const displaySearchResult = data => {
   const searchResult = document.getElementById('search-result');
   searchResult.textContent = '';
+  
   // empty search and no phone found error handle 
   if(data == 0){
       const searchResult = document.getElementById('not-found');
@@ -65,8 +66,6 @@ const loadMobileDetail = async Id => {
 }
 // display Mobile Detail
 const displayMobileDetail = mobile => {
-
-  console.log(mobile);
   
   const mobileDetails = document.getElementById('mobile-details');
   mobileDetails.textContent = '';
