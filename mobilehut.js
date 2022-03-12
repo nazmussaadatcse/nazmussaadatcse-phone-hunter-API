@@ -89,3 +89,8 @@ const displayMobileDetail = mobile => {
       `;
       mobileDetails.appendChild(div);
 }
+// field clear 
+function clear (){
+  const mobileDetailsFields = document.getElementById('mobile-details');
+  mobileDetailsFields.textContent = '';
+}
