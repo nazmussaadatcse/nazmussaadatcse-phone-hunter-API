@@ -66,6 +66,8 @@ const loadMobileDetail = async Id => {
 }
 // display Mobile Detail
 const displayMobileDetail = mobile => {
+
+  console.log(mobile);
   
   const mobileDetails = document.getElementById('mobile-details');
   mobileDetails.textContent = '';
@@ -78,12 +80,20 @@ const displayMobileDetail = mobile => {
       <div class="card-body">
           <h5 class="card-title">${mobile.name}</h5>
           <p class="card-text">Brand: ${mobile.brand}</p>
+          <h3 class="text-center">Main Features</h3>
           <p class="card-text">ChipSet: ${mobile.mainFeatures.chipSet}</p>
           <p class="card-text">Memory: ${mobile.mainFeatures.memory}</p>
-          <p class="card-text">Sensors: ${mobile.mainFeatures.sensors}</p>
+          <p class="card-text">Sensors: ${mobile.mainFeatures.sensors.join(", ")}</p>
           <p class="card-text">Storage: ${mobile.mainFeatures.storage}</p>
-          <p class="card-text">others: ${mobile.others.GPS}</p>
-          <p class="card-text">Release date: ${mobile?.releaseDate || 'Not Found'}</p>
+          <h3 class="text-center">Other Features</h3>
+          <p class="card-text">Bluetooth: ${mobile.others?.Bluetooth}</p>
+          <p class="card-text">GPS: ${mobile.others?.GPS}</p>
+          <p class="card-text">NFC: ${mobile.others?.NFC}</p>
+          <p class="card-text">Radio: ${mobile.others?.Radio}</p>
+          <p class="card-text">USB: ${mobile.others?.USB}</p>
+          <p class="card-text">WLAN: ${mobile.others?.WLAN}</p>
+          <p class="card-text">GPS: ${mobile.others?.GPS}</p>
+          <p class="card-text">Release date: ${mobile?.releaseDate ? mobile?.releaseDate : 'Not Found'}</p>
       </div>
       `;
       mobileDetails.appendChild(div);
