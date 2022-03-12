@@ -63,3 +63,17 @@ const loadMobileDetail = async Id => {
   
 
 }
+// display Mobile Detail
+const displayMobileDetail = mobile => {
+
+  console.log(mobile);
+  
+  const mobileDetails = document.getElementById('mobile-details');
+  mobileDetails.textContent = '';
+  
+  const div = document.createElement('div');
+  div.classList.add('card');
+
+
+}
+}
